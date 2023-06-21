@@ -57,3 +57,42 @@
 <script src="resources/vendors/feather-icons/feather.min.js"></script>
 <script src="resources/vendors/dayjs/dayjs.min.js"></script>
 <script src="resources/assets/js/phoenix.js"></script>
+
+<style>
+    .navbar-vertical-footer{
+    background-color:#1E283D;
+    color:white;
+    border-top:1px solid #373E53 !important;
+    }
+
+    .btn.p-0.border.border-200.btn-support-chat{
+    background-color:#EF5350 !important;
+    color:white !important;
+    }
+
+    .btn.p-0.border.border-200.btn-support-chat span{
+    color:white !important;
+    }
+
+    .svg-inline--fa.fa-circle.text-success.fs--1.ms-2{
+    color:white!important;
+    }
+
+    .card-body.d-flex.align-items-center.px-2.py-1{
+    background-color:#111827 !important;
+    color:white !important;
+    border-radius:17px 17px 0px 0px;
+    }
+
+    .icon-spin.position-absolute.all-0.d-flex.flex-center svg{
+    color:white !important;
+    }
+
+    .text-uppercase.text-700.fw-bold.py-2.pe-2.ps-1.rounded-end{
+    color:white!important;
+    }
+
+    .bg-holder.bg-auth-card-overlay{
+    background-color:grey !important;
+    }
+</style>
