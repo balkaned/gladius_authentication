@@ -59,11 +59,6 @@ public class IndexController {
         return new ModelAndView("public/pages/authentication/card/sign-in");
     }
 
-    /*@RequestMapping("/index")
-    public ModelAndView index(ModelMap model, HttpServletRequest request) {
-        return new ModelAndView("public/index");
-    }*/
-
     @RequestMapping("/verificarLogin")
     public ModelAndView verificarLogin(ModelMap model, HttpServletRequest request,@ModelAttribute("usuarioConeccion") UsuarioConeccion uc,BindingResult result,SessionStatus status) {
 

@@ -72,14 +72,14 @@
                   <div class="col mx-auto">
                     <div class="auth-form-box">
                       <div class="text-center mb-7"><a class="d-flex flex-center text-decoration-none mb-4" href="../../../index.html">
-                          <div class="d-flex align-items-center fw-bolder fs-5 d-inline-block"><img src="resources/assets/img/icons/logo.png" alt="phoenix" width="58" />
+                          <div class="d-flex align-items-center fw-bolder fs-5 d-inline-block"><img src="resources/assets/img/icons/logoLast.png" alt="phoenix" width="58" />
                           </div>
                         </a>
                         <h3 class="text-1000">Log in</h3>
                         <p class="text-700">Obtenga acceso a su cuenta</p>
                       </div>
-                      <button class="btn btn-phoenix-secondary w-100 mb-3"><span class="fab fa-google text-danger me-2 fs--1"></span>Sign in with google</button>
-                      <button class="btn btn-phoenix-secondary w-100"><span class="fab fa-facebook text-primary me-2 fs--1"></span>Sign in with facebook</button>
+                      <!--<button class="btn btn-phoenix-secondary w-100 mb-3"><span class="fab fa-google text-danger me-2 fs--1"></span>Sign in with google</button>
+                      <button class="btn btn-phoenix-secondary w-100"><span class="fab fa-facebook text-primary me-2 fs--1"></span>Sign in with facebook</button>-->
                       <div class="position-relative">
                         <hr class="bg-200 mt-5 mb-4" />
                         <div class="divider-content-center bg-white">or use email</div>
@@ -108,11 +108,11 @@
                             <label class="form-check-label mb-0" for="basic-checkbox">Remember me</label>
                           </div>
                         </div>
-                        <div class="col-auto"><a class="fs--1 fw-semi-bold" href="../../../pages/authentication/card/forgot-password.html">Forgot Password?</a></div>
+                        <!--<div class="col-auto"><a class="fs--1 fw-semi-bold" href="../../../pages/authentication/card/forgot-password.html">Forgot Password?</a></div>-->
                       </div>
                       <!--<button class="btn btn-primary w-100 mb-3">Login</button>-->
                       <button type="submit" class="btn btn-primary w-100 mb-3">Login</button>
-                      <div class="text-center"><a class="fs--1 fw-bold" href="../../../pages/authentication/card/sign-up.html">Create an account</a></div>
+                      <!--<div class="text-center"><a class="fs--1 fw-bold" href="../../../pages/authentication/card/sign-up.html">Create an account</a></div>-->
                     </div>
                   </div>
                 </div>
