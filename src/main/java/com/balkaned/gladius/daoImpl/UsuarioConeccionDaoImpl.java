@@ -1,5 +1,6 @@
 package com.balkaned.gladius.daoImpl;
 
+import com.balkaned.gladius.IndexController;
 import com.balkaned.gladius.beans.UsuarioConeccion;
 import com.balkaned.gladius.dao.UsuarioConeccionDao;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,9 +11,12 @@ import org.springframework.stereotype.Repository;
 import javax.sql.DataSource;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.logging.Logger;
 
 @Repository("UsuarioConecionDao")
 public class UsuarioConeccionDaoImpl implements UsuarioConeccionDao {
+
+    static Logger logger = Logger.getLogger(IndexController.class.getName());
 
     JdbcTemplate template;
 
@@ -73,7 +77,7 @@ public class UsuarioConeccionDaoImpl implements UsuarioConeccionDao {
                 }
             });
         }catch(DataAccessException sa){
-            System.out.println("Error de base de datos entré aqui");
+            logger.info("Error de base de datos entré aqui");
             uc.setUser("sinbd");
         }
         return uc;

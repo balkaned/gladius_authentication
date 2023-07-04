@@ -13,9 +13,12 @@ import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
 import java.io.IOException;
 import java.util.Map;
+import java.util.logging.Logger;
 
 @RestController
 public class IndexController {
+
+    static Logger logger = Logger.getLogger(IndexController.class.getName());
 
     @Autowired
     UsuarioConeccionService usuarioConeccionService;
@@ -70,14 +73,14 @@ public class IndexController {
             return new ModelAndView("redirect:/login");
         }else {
             if(uc.getUser().equals("")) {
-                System.out.println("Campos Vacios");
+                logger.info("Campos Vacios: ");
                 request.getSession().setAttribute("tiposession", "4");
                 //model.addAttribute("mensaje","Contraseña Erronea");
 
                 return new ModelAndView("redirect:/login");
             }else {
                 if(uc2.getUser().equals("noecontrado")){
-                    System.out.println("Usuario o Contraseña Incorrecta");
+                    logger.info("Usuario o Contraseña Incorrecta");
                     request.getSession().setAttribute("tiposession", "3");
                     //model.addAttribute("mensaje","Usuario o Contraseña Incorrecta");
 
@@ -87,7 +90,7 @@ public class IndexController {
 
                         UsuarioConeccion uc3=usuarioConeccionService.obtenerUsuarioConeccionById(uc2.getId_usuario());
 
-                        System.out.println("ID_Usuario: "+uc2.getId_usuario());
+                        logger.info("ID_Usuario: "+uc2.getId_usuario());
 
                         request.getSession().setAttribute("user", uc3.getUser());
                         request.getSession().setAttribute("idUser", uc3.getId_usuario());
@@ -95,13 +98,13 @@ public class IndexController {
                         request.getSession().setAttribute("tiposession", "1");
                         //request.getSession().setAttribute("iconMenu", "fa fa-arrow-left");
 
-                        System.out.println("User: "+uc3.getUser());
-                        System.out.println("Company: "+uc3.getDesCia());
-                        System.out.println("Email: "+uc3.getEmail());
-                        System.out.println("BdClientConnection: "+uc3.getSourceDes());
+                        logger.info("User: "+uc3.getUser());
+                        logger.info("Company: "+uc3.getDesCia());
+                        logger.info("Email: "+uc3.getEmail());
+                        logger.info("BdClientConnection: "+uc3.getSourceDes());
 
                         String sqlURL = "jdbc:postgresql://ec2-18-191-189-102.us-east-2.compute.amazonaws.com:5432/"+uc3.getSourceDes();
-                        System.out.println("RedirectURLClient: "+sqlURL);
+                        logger.info("RedirectURLClient: "+sqlURL);
 
                         /*####################3NUEVA CONEXION##################*/
                         //String sqlURL = "jdbc:postgresql://ec2-18-191-189-102.us-east-2.compute.amazonaws.com:5432/gladius05";
@@ -112,7 +115,7 @@ public class IndexController {
                         //return new ModelAndView("redirect:www.google.com");
                         return new ModelAndView("redirect:http://www.balkaned.com");
                     }else{
-                        System.out.println("Contraseña Erronea");
+                        logger.info("Contraseña Erronea");
                         request.getSession().setAttribute("tiposession", "2");
                         //model.addAttribute("mensaje","Contraseña Erronea");
 
