@@ -1,6 +1,6 @@
 package com.balkaned.gladius.daoImpl;
 
-import com.balkaned.gladius.IndexController;
+import com.balkaned.gladius.controllers.LoginController;
 import com.balkaned.gladius.beans.UsuarioConeccion;
 import com.balkaned.gladius.dao.UsuarioConeccionDao;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,7 @@ import java.util.logging.Logger;
 @Repository("UsuarioConecionDao")
 public class UsuarioConeccionDaoImpl implements UsuarioConeccionDao {
 
-    static Logger logger = Logger.getLogger(IndexController.class.getName());
+    static Logger logger = Logger.getLogger(LoginController.class.getName());
 
     JdbcTemplate template;
 
@@ -72,6 +72,28 @@ public class UsuarioConeccionDaoImpl implements UsuarioConeccionDao {
                     }else {
                         us.setUser("noecontrado");
                         us.setPass("noecontrado");
+                    }
+                    return us;
+                }
+            });
+        }catch(DataAccessException sa){
+            logger.info("Error de base de datos entré aqui");
+            uc.setUser("sinbd");
+        }
+        return uc;
+    }
+
+
+    public UsuarioConeccion obtenerUrlConexion(UsuarioConeccion uc) {
+
+        String sql="select iexurl_entorno from iexusuario where iexcodusu='"+uc.getId_usuario()+"' ";
+
+        try{
+            return (UsuarioConeccion) template.query(sql, new ResultSetExtractor<UsuarioConeccion>() {
+                public UsuarioConeccion extractData(ResultSet rs) throws SQLException, DataAccessException{
+                    UsuarioConeccion us = new UsuarioConeccion();
+                    if(rs.next()) {
+                        us.setUrlConexion(rs.getString("iexurl_entorno"));
                     }
                     return us;
                 }

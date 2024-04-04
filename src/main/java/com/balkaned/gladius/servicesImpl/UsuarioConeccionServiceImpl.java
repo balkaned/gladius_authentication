@@ -20,5 +20,9 @@ public class UsuarioConeccionServiceImpl implements UsuarioConeccionService {
     public UsuarioConeccion obtenerUsuarioConeccionByName(UsuarioConeccion uc) {
         return dao.obtenerUsuarioConeccionByName(uc);
     }
+
+    public UsuarioConeccion obtenerUrlConexion(UsuarioConeccion uc) {
+        return dao.obtenerUrlConexion(uc);
+    }
 }
 

@@ -8,4 +8,6 @@ public interface UsuarioConeccionDao {
 
     public UsuarioConeccion obtenerUsuarioConeccionByName(UsuarioConeccion uc);
 
+    public UsuarioConeccion obtenerUrlConexion(UsuarioConeccion uc);
+
 }
