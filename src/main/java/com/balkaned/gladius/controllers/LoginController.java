@@ -20,6 +20,7 @@ public class LoginController {
 
     @RequestMapping("/login")
     public ModelAndView login(ModelMap model, HttpServletRequest request) {
+        log.info("/login");
 
         UsuarioConeccion uc = new UsuarioConeccion();
         model.addAttribute("usuarioConeccion", uc);
@@ -53,11 +54,12 @@ public class LoginController {
             }
         }
 
-        return new ModelAndView("public/pages/authentication/card/sign-in");
+        return new ModelAndView("public/login");
     }
 
     @RequestMapping("/verificarLogin")
     public ModelAndView verificarLogin(ModelMap model, HttpServletRequest request, @ModelAttribute("usuarioConeccion") UsuarioConeccion uc, BindingResult result, SessionStatus status) {
+        log.info("/verificarLogin");
 
         UsuarioConeccion uc2 = usuarioConeccionService.obtenerUsuarioConeccionByName(uc);
 
@@ -96,7 +98,9 @@ public class LoginController {
                         log.info("UrlEntornoConexiónAWS: " + UrlEntornoConexiónAWS);
                         log.info("Redireccionando... a su entorno AWS: ",UrlEntornoConexiónAWS);
 
-                        return new ModelAndView("redirect:"+UrlEntornoConexiónAWS);
+                        //return new ModelAndView("redirect:"+UrlEntornoConexiónAWS);
+                        //return new ModelAndView("redirect:/redireccionar@'"+UrlEntornoConexiónAWS+"'");
+                        return new ModelAndView("redirect:/redireccionar@"+uc2.getId_usuario());
                     } else {
                         log.info("Contraseña Erronea");
                         request.getSession().setAttribute("tiposession", "2");
@@ -106,5 +110,20 @@ public class LoginController {
                 }
             }
         }
+    }
+
+    @RequestMapping("/redireccionar@{idUser}")
+    public ModelAndView redireccionar(ModelMap model, HttpServletRequest request, @PathVariable String idUser) {
+        log.info("/redireccionar");
+
+        UsuarioConeccion uc5 = new UsuarioConeccion();
+        uc5.setId_usuario(idUser);
+
+        UsuarioConeccion uc6 = usuarioConeccionService.obtenerUrlConexion(uc5);
+        String UrlEntornoConexiónAWS=uc6.getUrlConexion();
+
+        model.addAttribute("url",UrlEntornoConexiónAWS);
+
+        return new ModelAndView("public/redireccionar");
     }
 }

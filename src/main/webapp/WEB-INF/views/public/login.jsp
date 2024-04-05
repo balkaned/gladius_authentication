@@ -14,9 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-    <jsp:include page="../../../links.jsp"></jsp:include>
-
+    <jsp:include page="links.jsp"></jsp:include>
 
     <script>
       var phoenixIsRTL = window.config.config.phoenixIsRTL;
