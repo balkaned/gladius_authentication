@@ -2,7 +2,6 @@ package com.balkaned.gladius.controllers;
 
 import com.balkaned.gladius.beans.UsuarioConeccion;
 import com.balkaned.gladius.services.UsuarioConeccionService;
-import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
@@ -10,6 +9,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
+import javax.servlet.http.HttpServletRequest;
 
 @RestController
 @Slf4j
