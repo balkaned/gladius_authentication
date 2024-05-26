@@ -18,19 +18,22 @@
     <script>
         setTimeout(function() {
             document.getElementById('btnRedir').click();
-        }, 7000);
+        }, 10000);
     </script>
   </head>
-  <body>
+  <body style="background-color: #2D65F6 !important;">
     <main class="main" id="top">
       <div class="content">
-        <div class="col-12">
-            <h3 class="text-center">Redireccionando...</h3>
-            <p class="text-center">En unos segundos usted será redireccionado a su entorno según sus credenciales.</p>
-            <div class="text-center">
-                <div class="spinner-border text-primary" role="status"><span class="visually-hidden"></span></div>
+        <div class="col-auto">
+            <div class="col-12 text-center mt-10">
+                <img width="80" src="resources/assets/img/icons/logoLasticon10.png" />
+                <p class="text-center text-white fs-0 mt-5 mb-0">Redireccionando...</p>
+                <p class="text-center text-white fs--1 mt-0">En unos segundos usted será redireccionado a su entorno según sus credenciales.</p>
+                <div class="text-center mt-5">
+                    <div class="spinner-border text-white" role="status"><span class="visually-hidden"></span></div>
+                </div>
+                <a id="btnRedir" class="ms-3 disabled" href="${url}"></a>
             </div>
-            <a id="btnRedir" class="ms-3 disabled" href="${url}" ></a>
         </div>
       </div>
     </main>

@@ -1,4 +1,4 @@
-package com.balkaned.gladius.beans;
+package com.balkaned.gladius.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

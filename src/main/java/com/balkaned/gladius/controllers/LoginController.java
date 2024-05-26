@@ -1,6 +1,6 @@
 package com.balkaned.gladius.controllers;
 
-import com.balkaned.gladius.beans.UsuarioConeccion;
+import com.balkaned.gladius.models.UsuarioConeccion;
 import com.balkaned.gladius.services.UsuarioConeccionService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
 package com.balkaned.gladius.dao;
 
-import com.balkaned.gladius.beans.UsuarioConeccion;
+import com.balkaned.gladius.models.UsuarioConeccion;
 
 public interface UsuarioConeccionDao {
 

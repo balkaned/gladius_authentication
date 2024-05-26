@@ -1,7 +1,7 @@
 package com.balkaned.gladius.daoImpl;
 
 import com.balkaned.gladius.controllers.LoginController;
-import com.balkaned.gladius.beans.UsuarioConeccion;
+import com.balkaned.gladius.models.UsuarioConeccion;
 import com.balkaned.gladius.dao.UsuarioConeccionDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;

@@ -1,6 +1,6 @@
 package com.balkaned.gladius.services;
 
-import com.balkaned.gladius.beans.UsuarioConeccion;
+import com.balkaned.gladius.models.UsuarioConeccion;
 
 public interface UsuarioConeccionService {
 
