@@ -84,7 +84,7 @@
                     <div class="auth-form-box">
                       <div class="text-center mb-0"><a class="d-flex flex-center text-decoration-none mb-4" href="www.balkaned.com">
                           <div class="d-flex align-items-center fw-bolder fs-5 d-inline-block">
-                            <img src="resources/assets/img/icons/logoLasticon11.png" alt="phoenix" width="58" />
+                            <img src="resources/assets/img/icons/logoLast.png" alt="phoenix" width="58" />
                           </div>
                         </a>
                         <h3 class="text-1000">Log in</h3>

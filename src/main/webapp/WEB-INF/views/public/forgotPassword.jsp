@@ -44,7 +44,7 @@
       <div class="container">
         <div class="row flex-center min-vh-100 py-5">
           <div class="col-sm-10 col-md-8 col-lg-5 col-xxl-4"><a class="d-flex flex-center text-decoration-none mb-4" href="www.balkaned.com">
-              <div class="d-flex align-items-center fw-bolder fs-3 d-inline-block"><img src="resources/assets/img/icons/logoLasticon11.png" alt="phoenix" width="58" />
+              <div class="d-flex align-items-center fw-bolder fs-3 d-inline-block"><img src="resources/assets/img/icons/logoLast.png" alt="phoenix" width="58" />
               </div>
             </a>
             <div class="px-xxl-5">

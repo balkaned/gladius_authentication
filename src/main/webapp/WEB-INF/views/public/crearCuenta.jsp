@@ -39,7 +39,7 @@
 
   </style>
 
-  <body style="background-color: #2D65F6 !important;">
+  <body>
 
     <!-- ===============================================-->
     <!--    Main Content-->
@@ -48,46 +48,46 @@
       <div class="container">
         <div class="row flex-center min-vh-100 py-5">
           <div class="col-sm-10 col-md-8 col-lg-5 col-xl-5 col-xxl-3"><a class="d-flex flex-center text-decoration-none mb-4" href="../../../index.html">
-              <div class="d-flex align-items-center fw-bolder fs-3 d-inline-block"><img src="resources/assets/img/icons/logoLasticon10.png" alt="phoenix" width="58" />
+              <div class="d-flex align-items-center fw-bolder fs-3 d-inline-block"><img src="resources/assets/img/icons/logoLast.png" alt="phoenix" width="58" />
               </div>
             </a>
             <div class="text-center mb-5">
-              <h3 class="text-body-highlight text-white fs-1">Crear cuenta</h3>
-              <p id="parrafo2" class="mt-3 text-body-tertiary text-white fs--1">Crea tu cuenta de balkaned y accede a todas nuestras plataformas como gladius, amakeya, etc, todo nuestro
+              <h3 class="text-body-highlight fs-1">Crear cuenta</h3>
+              <p id="parrafo2" class="mt-3 text-body-tertiary fs--1">Crea tu cuenta de balkaned y accede a todas nuestras plataformas como gladius, amakeya, etc, todo nuestro
               proceso es de manera online, mediante nuestra pasarela de pagos lo podrás hacer con visa, mastercad o paypal, ni bien recibamos una confirmación de tu pago, nuestro robot creará tu cuenta y te enviaremos tus accesos
               al correo que hayas registrado, no olvides seleccionar el software que utilizarás, puede ser 1 o más plataromas, saludos y éxitos en tu nuevo proyecto!</p>
             </div>
             <button class="btn btn-phoenix-secondary w-100 mb-3"><span class="fab fa-google text-danger me-2 fs-9"></span>Sign up with google</button>
             <button class="btn btn-phoenix-secondary w-100"><span class="fab fa-facebook text-primary me-2 fs-9"></span>Sign up with facebook</button>
-            <!--<div class="position-relative mt-4">
+            <div class="position-relative mt-4">
               <hr class="bg-body-secondary" />
               <div class="divider-content-center">or use email</div>
-            </div>-->
+            </div>
             <form>
               <div class="mb-3 text-start mt-3">
-                <label class="form-label text-white" for="name">Name</label>
+                <label class="form-label" for="name">Name</label>
                 <input class="form-control" id="name" type="text" placeholder="Name" />
               </div>
               <div class="mb-3 text-start">
-                <label class="form-label text-white" for="email">Email address</label>
+                <label class="form-label" for="email">Email address</label>
                 <input class="form-control" id="email" type="email" placeholder="name@example.com" />
               </div>
               <div class="row g-3 mb-3">
                 <div class="col-sm-6">
-                  <label class="form-label text-white" for="password">Password</label>
+                  <label class="form-label" for="password">Password</label>
                   <input class="form-control form-icon-input" id="password" type="password" placeholder="Password" />
                 </div>
                 <div class="col-sm-6">
-                  <label class="form-label text-white" for="confirmPassword">Confirm Password</label>
+                  <label class="form-label" for="confirmPassword">Confirm Password</label>
                   <input class="form-control form-icon-input" id="confirmPassword" type="password" placeholder="Confirm Password" />
                 </div>
               </div>
               <div class="form-check mb-3">
                 <input class="form-check-input" id="termsService" type="checkbox" />
-                <label class="form-label fs-9 text-transform-none text-white" for="termsService">I accept the <a class="text-white" href="#!">terms </a>and <a class="text-white" href="#!">privacy policy</a></label>
+                <label class="form-label fs-9 text-transform-none" for="termsService">I accept the <a class="" href="#!">terms </a>and <a class="" href="#!">privacy policy</a></label>
               </div>
-              <button class="btn btn-success w-100 mb-3">Crear cuenta</button>
-              <div class="text-center"><a class="fs--1 fw-bold text-white me-3" href="login">Ir atras</a><a class="fs--1 fw-bold text-white" href="login">Iniciar session con una cuenta existente</a></div>
+              <button class="btn btn-primary w-100 mb-3">Crear cuenta</button>
+              <div class="text-center"><a class="fs--1 fw-bold me-3" href="login">Ir atras</a><a class="fs--1 fw-bold" href="login">Iniciar session con una cuenta existente</a></div>
             </form>
           </div>
         </div>
