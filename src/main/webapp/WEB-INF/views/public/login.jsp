@@ -133,7 +133,7 @@
                         <div class="col-auto"><a class="fs--1 fw-semi-bold" href="forgotPassword">Olvidó su contraseña?</a></div>
                       </div>
                       <!--<button class="btn btn-primary w-100 mb-3">Login</button>-->
-                      <button type="submit" class="btn btn-sm btn-primary w-100 mb-2">Login</button>
+                      <button type="submit" class="btn btn-primary w-100 mb-2">Login</button>
                       <div class="text-center"><a class="mb-3 btn btn-sm btn-phoenix-secondary fs--1 fw-bold" href="crearCuenta"><span class="fa-brands fa-paypal me-2"></span>Crear cuenta Balkaned</a></div>
                     </div>
                   </div>
