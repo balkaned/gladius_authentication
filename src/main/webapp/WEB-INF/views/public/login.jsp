@@ -32,6 +32,23 @@
     </script>
   </head>
 
+  <style>
+    #up{
+        background-color: #2D65F6;
+        border-radius: 7px 0px 0px 7px !important;
+    }
+
+    @media (max-width:990px){
+        #low{
+            padding: 20px;
+        }
+
+        #up{
+            border-radius: 7px 7px 0px 0px !important;
+        }
+    }
+  </style>
+
   <body style="background-color: #2D65F6 !important;">
   <f:form id="form" methot="post" modelAttribute="usuarioConeccion" action="verificarLogin">
 
@@ -48,11 +65,11 @@
             <div class="card border border-200 auth-card">
               <div class="card-body p-0 border-0">
                 <div class="row align-items-center gx-0 gy-7">
-                  <div style="background-color: #2D65F6 !important; border-radius: 7px 0px 0px 7px !important" class="col-auto rounded-0 position-relative overflow-hidden auth-title-box">
+                  <div id="up" class="col-auto rounded-0 position-relative overflow-hidden auth-title-box">
                     <div>
                     </div>
                     <!--/.bg-holder-->
-                    <div class="position-relative px-4 px-lg-7 pt-7 pb-7 pb-sm-5 text-center text-md-start pb-lg-7 pb-md-7">
+                    <div class="position-relative px-4 px-lg-7 pt-5 pb-7 pb-sm-5 text-center text-md-start pb-lg-0 pb-md-7">
                       <h3 class="mb-3 text-white fs-1">Balkaned Authentication</h3>
                       <p style="font-size:12px;" class="text-white">Software para la gestión de información del trabajador, procesos de cálculo de planillas y los procesos siguientes como integración contable, reporte a Sunat Plame, reporte a ministerio de trabajo, reportes de Afp Net y otros reportes.</p>
                       <!--<ul class="list-unstyled mb-0 w-max-content w-md-auto mx-auto">
@@ -63,10 +80,11 @@
                     </div>
                     <div class="position-relative z-index--1 mb-6 d-none d-md-block text-center mt-md-15"><img class="auth-title-box-img d-dark-none" src="resources/assets/img/spot-illustrations/auth.png" alt="" /><img class="auth-title-box-img d-light-none" src="resources/assets/img/spot-illustrations/auth-dark.png" alt="" /></div>
                   </div>
-                  <div class="col mx-auto">
+                  <div id="low" class="col mx-auto">
                     <div class="auth-form-box">
-                      <div class="text-center mb-7"><a class="d-flex flex-center text-decoration-none mb-4" href="../../../index.html">
-                          <div class="d-flex align-items-center fw-bolder fs-5 d-inline-block"><img src="resources/assets/img/icons/logoLast.png" alt="phoenix" width="58" />
+                      <div class="text-center mb-0"><a class="d-flex flex-center text-decoration-none mb-4" href="www.balkaned.com">
+                          <div class="d-flex align-items-center fw-bolder fs-5 d-inline-block">
+                            <img src="resources/assets/img/icons/logoLasticon11.png" alt="phoenix" width="58" />
                           </div>
                         </a>
                         <h3 class="text-1000">Log in</h3>
@@ -74,10 +92,10 @@
                       </div>
                       <!--<button class="btn btn-phoenix-secondary w-100 mb-3"><span class="fab fa-google text-danger me-2 fs--1"></span>Sign in with google</button>
                       <button class="btn btn-phoenix-secondary w-100"><span class="fab fa-facebook text-primary me-2 fs--1"></span>Sign in with facebook</button>-->
-                      <div class="position-relative">
+                      <!--<div class="position-relative">
                         <hr class="bg-200 mt-5 mb-4" />
                         <div class="divider-content-center bg-white">or use email</div>
-                      </div>
+                      </div>-->
                       <div class="mb-3 text-start">
                         <label class="form-label" for="email">Usuario</label>
                         <div class="form-icon-container">
@@ -85,28 +103,38 @@
                           <f:input id="iptUs" type="text" path="user" cssClass="form-control form-icon-input" aria-describedby="emailHelp" placeholder="Ingrese Usuario" value=""/><span class="fas fa-user text-900 fs--1 form-icon"></span>
                         </div>
                       </div>
-                      <div class="mb-3 text-start">
+                      <div class="mb-2 text-start">
                         <label class="form-label" for="password">Contraseña</label>
                         <div class="form-icon-container">
                           <!--<input class="form-control form-icon-input" id="password" type="password" placeholder="Password" /><span class="fas fa-key text-900 fs--1 form-icon"></span>-->
                           <f:input id="ippass" value="" type="password" path="pass" cssClass="form-control form-icon-input" placeholder="Ingrese Contraseña"/><span class="fas fa-key text-900 fs--1 form-icon"></span>
                         </div>
                       </div>
-                      <span style="float:left; text-align:left; font-size: 11px; height:50px; width:280px; border:0px solid green; color:#D90000;">
-                              ${mensaje}
-                      </span>
-                      <div class="row flex-between-center mb-7">
+                      <div class="col-xl-12">
+                      	<c:if test="${mensaje!=null}">
+                      		   <div id="alert" class="alert alert-outline-danger bg-danger bg-opacity-10 d-flex align-items-center" role="alert">
+                      			<span class="fa-regular fa-times-circle text-danger fs-0 me-3"></span>
+                      			<div class="col-11">
+                      				<strong class="text-black">Error al guardar</strong>
+                      				 <p class="mb-0 fw-semi-bold text-1000">${mensaje} <a href="#">Mas información</a></p>
+                      			</div>
+                      			<button class="btn-close fs--2" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+                      		   </div>
+                      	</c:if>
+                      </div>
+
+                      <div class="row flex-between-center mb-2">
                         <div class="col-auto">
-                          <div class="form-check mb-0">
+                          <div class="form-check mb-2">
                             <input class="form-check-input" id="basic-checkbox" type="checkbox" checked="checked" />
                             <label class="form-check-label mb-0" for="basic-checkbox">Remember me</label>
                           </div>
                         </div>
-                        <!--<div class="col-auto"><a class="fs--1 fw-semi-bold" href="../../../pages/authentication/card/forgot-password.html">Forgot Password?</a></div>-->
+                        <div class="col-auto"><a class="fs--1 fw-semi-bold" href="forgotPassword">Olvidó su contraseña?</a></div>
                       </div>
                       <!--<button class="btn btn-primary w-100 mb-3">Login</button>-->
-                      <button type="submit" class="btn btn-primary w-100 mb-3">Login</button>
-                      <!--<div class="text-center"><a class="fs--1 fw-bold" href="../../../pages/authentication/card/sign-up.html">Create an account</a></div>-->
+                      <button type="submit" class="btn btn-sm btn-primary w-100 mb-2">Login</button>
+                      <div class="text-center"><a class="mb-3 btn btn-sm btn-phoenix-secondary fs--1 fw-bold" href="crearCuenta"><span class="fa-brands fa-paypal me-2"></span>Crear cuenta Balkaned</a></div>
                     </div>
                   </div>
                 </div>

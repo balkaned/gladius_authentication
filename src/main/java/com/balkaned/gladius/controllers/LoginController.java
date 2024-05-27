@@ -126,4 +126,18 @@ public class LoginController {
 
         return new ModelAndView("public/redireccionar");
     }
+
+    @RequestMapping("/crearCuenta")
+    public ModelAndView crearCuenta(ModelMap model, HttpServletRequest request) {
+        log.info("/crearCuenta");
+
+        return new ModelAndView("public/crearCuenta");
+    }
+
+    @RequestMapping("/forgotPassword")
+    public ModelAndView forgotPassword(ModelMap model, HttpServletRequest request) {
+        log.info("/forgotPassword");
+
+        return new ModelAndView("public/forgotPassword");
+    }
 }
